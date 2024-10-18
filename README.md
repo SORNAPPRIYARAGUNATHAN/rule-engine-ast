@@ -49,6 +49,7 @@ class Node:
 Setup Instructions
 
 *Prerequisites
+
 1)Python 3.9
 
 2)Required libraries (installed via requirements.txt)
