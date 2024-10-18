@@ -12,5 +12,5 @@ class Node:
             elif self.value == 'OR':
                 return self.left.evaluate(data) or self.right.evaluate(data)
         elif self.type == 'operand':
-            # Evaluate comparison like 'age > 30'
-            return eval(self.value, {}, data)
+            # Use Python's eval() function to evaluate the condition
+            return eval(self.value.format(**data))

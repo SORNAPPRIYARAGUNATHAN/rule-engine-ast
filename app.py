@@ -22,20 +22,7 @@ def evaluate_rule(rule_id):
     result = rule_ast.evaluate(data)
     return jsonify({"result": result})
 
-@app.route('/update_rule/<int:rule_id>', methods=['PUT'])
-def update_rule(rule_id):
-    new_rule_string = request.json.get('rule_string')  # Get the new rule string
-    if rule_id not in rules:  # Check if rule exists
-        return jsonify({"error": "Rule not found"}), 404
-
-    try:
-        ast = parse_rule_string_to_ast(new_rule_string)  # Parse new rule into AST
-        rules[rule_id] = ast  # Update the rule
-        return jsonify({"message": "Rule updated successfully"}), 200
-    except Exception as e:
-        return jsonify({"error": str(e)}), 500  # Handle errors
-
-# This function parses the rule string and creates an AST
+# This is a basic parser function to convert rule strings into an AST
 def parse_rule_string_to_ast(rule_string):
     if 'AND' in rule_string:
         parts = rule_string.split('AND')
@@ -51,5 +38,3 @@ def parse_rule_string_to_ast(rule_string):
 
 if __name__ == '__main__':
     app.run(debug=True)
-
-
