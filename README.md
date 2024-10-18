@@ -1,16 +1,23 @@
-Assignment 1: 
+#Assignment 1: 
+
 #Rule Engine with AST
 
 Codebase
+
 * GitHub Handle: (https://github.com/SORNAPPRIYARAGUNATHAN/rule-engine-ast)
   
 Overview
-* This project implements a Rule Engine using an Abstract Syntax Tree (AST) to evaluate user eligibility based on dynamic rules. The system allows for rule creation, combination, modification, and evaluation against user data.
+
+* This project implements a Rule Engine using an Abstract Syntax Tree (AST) to evaluate user eligibility based on dynamic rules.
+  
+* The system allows for rule creation, combination, modification, and evaluation against user data.
 
 Features
+
 *AST Structure: A data structure for representing rules as an Abstract Syntax Tree.
 
 *API Endpoints:
+
          1)create_rule(rule_string): Parses a rule string and constructs the corresponding AST.
          
          2)combine_rules(rules): Combines multiple ASTs into a single tree for complex rule evaluation.
@@ -30,9 +37,13 @@ The Node class represents a node in the AST, supporting different types of opera
 python
 
 class Node:
+
     def __init__(self, value, left=None, right=None):
+    
         self.value = value  # The operator or condition
+        
         self.left = left    # Left child node
+        
         self.right = right   # Right child node
         
 Setup Instructions
