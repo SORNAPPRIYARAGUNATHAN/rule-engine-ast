@@ -56,7 +56,7 @@ Setup Instructions
 Setup Instructions
 
 1)Clone the repository:
-          git clone https://github.com/yourusername/rule-engine-ast.git cd rule-engine-ast
+          git clone https://github.com/SORNAPPRIYARAGUNATHAN/rule-engine-ast.git cd rule-engine-ast
           
 2)Install dependencies:
           pip install -r requirements.txt
